@@ -31,7 +31,7 @@ export default function HeroSection() {
                 <div className="md:hidden absolute inset-0">
                     <motion.div 
                         className="w-full h-full bg-cover bg-center"
-                        style={{ backgroundImage: "url('/heroimage.webp')" }}
+                        style={{ backgroundImage: "url('/Heroimage1.webp')" }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8 }}
