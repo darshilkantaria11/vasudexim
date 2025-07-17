@@ -141,9 +141,9 @@ const Navbar = () => {
                                     href={item.href}
                                     title={item.title}
                                     onClick={() => setIsOpen(false)}
-                                    className="border-b block text-lime-400 hover:text-blue-600 px-4 py-3 font-medium hover:bg-gray-50 transition-colors"
+                                    className="border-b block text-black hover:text-blue-600 px-4 py-3 font-medium hover:bg-gray-50 transition-colors"
                                 >
-                                    {item.name}
+                                    {item.name} →
                                 </Link>
                             ))}
                             <Link

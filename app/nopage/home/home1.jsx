@@ -50,7 +50,7 @@ export default function HeroSection() {
                 </div>
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/20" />
             </div>
 
             {/* Content */}
@@ -65,14 +65,14 @@ export default function HeroSection() {
                         className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
                         variants={itemVariants}
                     >
-                        Your Trusted Partner <br />
+                        
                         <motion.span 
                             className="block mt-2"
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.4, duration: 0.7 }}
                         >
-                            in Global Chemical Trade
+                            Your Trusted Partner in Global Chemical Trade
                         </motion.span>
                     </motion.h1>
                     
