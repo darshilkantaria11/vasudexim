@@ -20,7 +20,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 740);
+            setIsScrolled(window.scrollY > 100);
         };
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
@@ -88,7 +88,7 @@ const Navbar = () => {
                             className="ml-8 flex items-center"
                         >
                             <Link
-                                href="/get-quote"
+                                href="/contact"
                                 title="Request a Chemical Quote from Vasudexim"
                                 className="shine-button bg-lime-400 text-black font-bold  border border-lime-400 px-4 font-medium py-3 hover:scale-105 transition-all text-md shadow-lg relative z-10"
                             >
@@ -105,7 +105,7 @@ const Navbar = () => {
                             className="ml-4 flex items-center lg:hidden"
                         >
                             <Link
-                                href="/get-quote"
+                                href="/contact"
                                 title="Request a Quote"
                                 className="shine-button bg-lime-400 text-black   border border-lime-400 px-3 py-2 font-medium text-sm shadow-md transition-all"
                             >
@@ -148,7 +148,7 @@ const Navbar = () => {
                                 </Link>
                             ))}
                             <Link
-                                href="/get-quote"
+                                href="/contact"
                                 title="Request a Quote from Vasudexim"
                                 className="shine-button bg-lime-400 text-white hover:bg-white hover:text-lime-400 border border-lime-400 block text-center px-6 py-3 transition-colors font-semibold shadow-md"
                             >

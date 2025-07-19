@@ -46,7 +46,6 @@ export default function BasicChemicals() {
               <li>➤ Calcium chloride powder 94%</li>
               <li>➤ Calcium chloride granules</li>
               <li>➤ Magnesium chloride flakes</li>
-              <li>➤ Ammonium Sulphate Powder</li>
             </ul>
         
           </div>
