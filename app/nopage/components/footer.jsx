@@ -61,19 +61,26 @@ export default function Footer() {
                     >
                         <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-gray-700">Quick Links</h3>
                         <ul className="space-y-3">
-                            {['Home', 'Industries', 'Products', 'Client & Affiliation', 'Contact'].map((item, index) => (
+                            {[
+                                { name: 'Home', href: '/' },
+                                { name: 'Industries', href: '/industries' },
+                                { name: 'Products', href: '/products' },
+                                { name: 'Client & Affiliation', href: '/clientsaffiliation' },
+                                { name: 'Contact', href: '/contact' }
+                            ].map((item, index) => (
                                 <motion.li
                                     key={index}
                                     whileHover={{ x: 5 }}
                                     transition={{ type: "spring", stiffness: 300 }}
                                 >
-                                    <a href="#" className="text-gray-400 hover:text-lime-400 transition-colors">
-                                        {item}
-                                    </a>
+                                    <Link href={item.href} className="text-gray-400 hover:text-lime-400 transition-colors">
+                                        {item.name}
+                                    </Link>
                                 </motion.li>
                             ))}
                         </ul>
                     </motion.div>
+
 
                     {/* Products */}
                     <motion.div
@@ -148,52 +155,14 @@ export default function Footer() {
                     </motion.div>
                 </div>
 
-                {/* Newsletter */}
-                <motion.div
-                    className="py-10 border-t border-gray-800 mb-10"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <div className="max-w-3xl mx-auto text-center">
-                        <h3 className="text-xl font-semibold mb-3">Stay Updated</h3>
-                        <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-                            Subscribe to our newsletter for the latest industry insights, product updates, and special offers.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="flex-grow px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-lime-500"
-                            />
-                            <motion.button
-                                className="bg-lime-500 text-gray-900 font-medium px-6 py-3 rounded-lg hover:bg-lime-400 transition-colors"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                Subscribe
-                            </motion.button>
-                        </div>
-                    </div>
-                </motion.div>
+
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-gray-500 text-sm mb-4 md:mb-0">
                         &copy; {currentYear} Vasudexim . All rights reserved.
                     </p>
-                    <div className="flex space-x-6">
-                        {['Privacy Policy', 'Terms of Service', 'Sitemap'].map((item, index) => (
-                            <a
-                                key={index}
-                                href="#"
-                                className="text-gray-500 hover:text-lime-400 text-sm transition-colors"
-                            >
-                                {item}
-                            </a>
-                        ))}
-                    </div>
+
                 </div>
             </div>
         </footer>

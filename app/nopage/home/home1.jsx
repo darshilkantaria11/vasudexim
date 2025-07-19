@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 export default function HeroSection() {
     // Animation variants
     const containerVariants = {
@@ -87,8 +87,8 @@ export default function HeroSection() {
                         className="mt-8 flex gap-4 flex-wrap items-center"
                         variants={itemVariants}
                     >
-                        <a
-                            href="#contact"
+                        <Link
+                            href="/contact"
                             className="bg-lime-400 text-black font-medium px-6 py-3 rounded shadow-md hover:bg-lime-300 transition"
                         >
                             <motion.span
@@ -98,7 +98,7 @@ export default function HeroSection() {
                             >
                                 Get in Touch →
                             </motion.span>
-                        </a>
+                        </Link>
                     </motion.div>
                 </div>
             </motion.div>

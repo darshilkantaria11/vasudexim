@@ -6,6 +6,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Logo from "../../../public/Logo.png";
 
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -14,7 +15,7 @@ const Navbar = () => {
         { name: 'Industries', href: '/industries', title: 'Industries We Serve' },
         { name: 'Products', href: '/products', title: 'Our Chemical Products' },
         { name: 'Clients & Affiliations', href: '/clients', title: 'Our Trusted Clients & Global Network' },
-        { name: 'Contact', href: '/contact-us', title: 'Get in Touch with Vasudexim' },
+        { name: 'Contact', href: '/contact', title: 'Get in Touch with Vasudexim' },
     ];
 
     useEffect(() => {
