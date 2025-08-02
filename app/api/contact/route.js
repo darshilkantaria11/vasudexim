@@ -21,8 +21,8 @@ export async function POST(req) {
       to: process.env.ADMIN_EMAIL,
       subject: `New Inquiry: ${subject}`,
       html: `
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; background-color: #b2272d; border-radius: 8px;">
-    <div style="background-color: #84cc16; padding: 20px; border-radius: 8px 8px 0 0; color: white;">
+  <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; background-color: #f9f9f9; border-radius: 8px;">
+    <div style="background-color: #b2272d; padding: 20px; border-radius: 8px 8px 0 0; color: white;">
       <h2 style="margin: 0;">New Chemical Inquiry</h2>
     </div>
     <div style="padding: 20px; background-color: white; border-radius: 0 0 8px 8px; margin-top: 10px;">
