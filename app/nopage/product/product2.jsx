@@ -197,7 +197,7 @@ const ProductsSection = () => {
                                             </motion.p>
                                             <Link href={`/products/${createSlug(product.title)}`} title={`${product.title}`} passHref>
                                                 <motion.p
-                                                    className="inline-flex items-center gap-1 bg-lime-400 text-gray-900 font-medium px-2 py-2  text-sm lg:text-base"
+                                                    className="inline-flex items-center gap-1 bg-r1 text-white font-medium px-2 py-2  text-sm lg:text-base"
                                                     whileHover={{ scale: 1.03 }}
                                                     whileTap={{ scale: 0.97 }}
                                                 >

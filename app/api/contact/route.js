@@ -1,14 +1,13 @@
 import nodemailer from 'nodemailer';
 
 export async function POST(req) {
-  const { name, number, subject, message } = await req.json();
+  const { name, number, email, subject, message } = await req.json();
 
-  if (!name || !number || !subject || !message) {
+  if (!name || !number || !email || !subject || !message) {
     return new Response(JSON.stringify({ error: "All fields are required" }), { status: 400 });
   }
 
   try {
-    // Create transporter
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -17,13 +16,12 @@ export async function POST(req) {
       },
     });
 
-    // Email to admin
     const adminMail = {
       from: `"Vasudexim Inquiry" <${process.env.EMAIL_USER}>`,
       to: process.env.ADMIN_EMAIL,
       subject: `New Inquiry: ${subject}`,
       html: `
-  <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; background-color: #f9f9f9; border-radius: 8px;">
+  <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; background-color: #b2272d; border-radius: 8px;">
     <div style="background-color: #84cc16; padding: 20px; border-radius: 8px 8px 0 0; color: white;">
       <h2 style="margin: 0;">New Chemical Inquiry</h2>
     </div>
@@ -36,6 +34,10 @@ export async function POST(req) {
         <tr>
           <td style="padding: 10px; font-weight: bold; border-bottom: 1px solid #eee;">Contact Number:</td>
           <td style="padding: 10px; border-bottom: 1px solid #eee;">${number}</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; font-weight: bold; border-bottom: 1px solid #eee;">Email:</td>
+          <td style="padding: 10px; border-bottom: 1px solid #eee;">${email}</td>
         </tr>
         <tr>
           <td style="padding: 10px; font-weight: bold; border-bottom: 1px solid #eee;">Subject:</td>
@@ -51,7 +53,7 @@ export async function POST(req) {
       </p>
     </div>
   </div>
-`
+      `
     };
 
     await transporter.sendMail(adminMail);

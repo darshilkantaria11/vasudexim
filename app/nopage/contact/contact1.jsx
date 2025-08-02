@@ -5,10 +5,12 @@ const ContactUs = () => {
     // State for form fields
     const [formData, setFormData] = useState({
         name: '',
+        email: '',  // <-- added
         number: '',
         subject: '',
         message: ''
     });
+
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState('');
@@ -46,7 +48,7 @@ const ContactUs = () => {
 
             if (res.ok) {
                 setSubmitMessage("Thank you for your inquiry! We'll contact you shortly.");
-                setFormData({ name: '', number: '', subject: '', message: '' });
+                setFormData({ name: '', email: '', number: '', subject: '', message: '' });
             } else {
                 setSubmitMessage("Failed to send message. Please try again later.");
             }
@@ -60,22 +62,20 @@ const ContactUs = () => {
 
     return (
         <>
-            <div className="sticky top-0 z-20 bg-blue-700 p-10 w-full"></div>
+            <div className="sticky top-0 z-20 backdrop-blur-md bg-black/20 shadow-md p-10 w-full"></div>
 
             <div className="min-h-screen bg-white py-4 px-4 sm:px-6 lg:px-8">
                 <div className="container mx-auto">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-blue-700 to-blue-900 rounded-xl text-white py-16 px-6 relative overflow-hidden mb-8">
-                        {/* Left circular decoration */}
-                        <div className="absolute left-[-60px] top-[-60px] w-60 h-60 border-4 border-blue-500 rounded-full opacity-40" />
-                        <div className="absolute left-[-30px] top-[-30px] w-40 h-40 border-4 border-blue-500 rounded-full opacity-40" />
-
-                        {/* Right circular decoration */}
-                        <div className="absolute right-[-60px] bottom-[-60px] w-60 h-60 border-4 border-blue-500 rounded-full opacity-40" />
-                        <div className="absolute right-[-30px] bottom-[-30px] w-40 h-40 border-4 border-blue-500 rounded-full opacity-40" />
+                    <div className="bg-r1 rounded-xl text-white py-16 px-6 relative overflow-hidden mb-8">
+                        {/* Decorative Circles */}
+                        <div className="absolute left-[-60px] top-[-60px] w-60 h-60 border-4 border-white/30 rounded-full opacity-20" />
+                        <div className="absolute left-[-30px] top-[-30px] w-40 h-40 border-4 border-white/30 rounded-full opacity-20" />
+                        <div className="absolute right-[-60px] bottom-[-60px] w-60 h-60 border-4 border-white/30 rounded-full opacity-20" />
+                        <div className="absolute right-[-30px] bottom-[-30px] w-40 h-40 border-4 border-white/30 rounded-full opacity-20" />
 
                         <div className="relative text-center">
-                            <button className="bg-white text-blue-700 px-6 py-2 rounded-full mb-4 shadow-lg hover:bg-blue-50 transition">
+                            <button className="bg-white text-r1 px-6 py-2 rounded-full mb-4 shadow-lg hover:bg-gray-100 transition">
                                 CONTACT US
                             </button>
                             <h2 className="text-3xl md:text-4xl font-bold">Get In Touch</h2>
@@ -83,9 +83,8 @@ const ContactUs = () => {
                     </div>
 
                     <div className="flex flex-col-reverse lg:flex-row gap-10">
-                        {/* Contact Information */}
+                        {/* Left: Contact Info */}
                         <div className="flex flex-col rounded-2xl overflow-hidden lg:w-2/5 h-auto">
-                            {/* Contact Methods */}
                             <div className="p-8 bg-white border border-gray-200 rounded-t-3xl">
                                 <h2 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h2>
 
@@ -95,11 +94,11 @@ const ContactUs = () => {
                                         href="https://wa.me/919898742743?text=Hello%20Vasudexim%2C%20I%20visited%20your%20website%20and%20I'm%20interested%20in%20your%20chemical%20products."
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center justify-between p-3 rounded-xl bg-blue-50 hover:bg-blue-100 transition"
+                                        className="flex items-center justify-between p-3 rounded-xl bg-r1/5 hover:bg-r1/10 transition"
                                     >
                                         <div className="flex items-center space-x-4">
-                                            <div className="bg-blue-100 p-2 rounded-full">
-                                                <svg className="h-6 w-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <div className="bg-r1/10 p-2 rounded-full">
+                                                <svg className="h-6 w-6 text-r1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                                                 </svg>
                                             </div>
@@ -111,10 +110,10 @@ const ContactUs = () => {
                                     </a>
 
                                     {/* Email */}
-                                    <div className="flex items-center justify-between p-3 rounded-xl bg-blue-50 hover:bg-blue-100 transition">
+                                    <div className="flex items-center justify-between p-3 rounded-xl bg-r1/5 hover:bg-r1/10 transition">
                                         <a href={`mailto:${email}`} className="flex items-center space-x-4">
-                                            <div className="bg-blue-100 p-2 rounded-full">
-                                                <svg className="h-6 w-6 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <div className="bg-r1/10 p-2 rounded-full">
+                                                <svg className="h-6 w-6 text-r1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                                 </svg>
                                             </div>
@@ -124,10 +123,9 @@ const ContactUs = () => {
                                             </div>
                                         </a>
 
-                                        {/* Copy Button */}
                                         <button
                                             onClick={handleCopy}
-                                            className="text-sm text-blue-600 hover:text-blue-800 px-3 py-1 bg-white border border-blue-200 rounded-lg"
+                                            className="text-sm text-r1 hover:text-r1/80 px-3 py-1 bg-white border border-r1/30 rounded-lg"
                                         >
                                             {copied ? "Copied!" : "Copy"}
                                         </button>
@@ -135,8 +133,8 @@ const ContactUs = () => {
                                 </div>
                             </div>
 
-                            {/* Right Side Text */}
-                            <div className="p-8 bg-gradient-to-r from-blue-800 to-blue-900 text-white flex flex-col justify-center space-y-4 rounded-b-3xl">
+                            {/* Company Message */}
+                            <div className="p-8 bg-r1 text-white flex flex-col justify-center space-y-4 rounded-b-3xl">
                                 <h2 className="text-3xl font-bold">Global Chemical Solutions</h2>
                                 <p className="text-lg opacity-90">
                                     Partnering with industries worldwide to deliver premium chemical products and innovative solutions. Let's build a sustainable chemical supply chain together.
@@ -144,7 +142,7 @@ const ContactUs = () => {
                             </div>
                         </div>
 
-                        {/* Contact Form */}
+                        {/* Right: Contact Form */}
                         <div className="lg:w-3/5">
                             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
                                 <h2 className="text-2xl font-bold text-gray-800 mb-2">Send Inquiry</h2>
@@ -153,7 +151,7 @@ const ContactUs = () => {
                                 </p>
 
                                 <form onSubmit={handleSubmit} className="space-y-6">
-                                    {/* Name Field */}
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">                                    {/* Name Field */}
                                     <div>
                                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                                             Your Name
@@ -172,6 +170,25 @@ const ContactUs = () => {
                                             />
                                         </div>
                                     </div>
+                                    {/* Email Field */}
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                                            Your Email
+                                        </label>
+                                        <input
+                                            type="email"
+                                            name="email"
+                                            id="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required
+                                            className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-r1 focus:border-r1"
+                                            placeholder="you@example.com"
+                                        />
+                                    </div>
+                                    </div>
+
+
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         {/* Number Field */}
@@ -238,8 +255,8 @@ const ContactUs = () => {
                                             type="submit"
                                             disabled={isSubmitting}
                                             className={`w-full py-3 px-6 rounded-lg text-white font-medium transition-all ${isSubmitting
-                                                ? 'bg-blue-400 cursor-not-allowed'
-                                                : 'bg-blue-600 hover:bg-blue-700 hover:shadow-lg'
+                                                ? 'bg-red-300 cursor-not-allowed'
+                                                : 'bg-r1 hover:shadow-lg'
                                                 }`}
                                         >
                                             {isSubmitting ? (

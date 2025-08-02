@@ -20,7 +20,7 @@ export default function HeroSection() {
           </p>
           <Link
             href="/products"
-            className="inline-flex items-center px-6 py-3 bg-lime-400 text-black font-medium rounded-sm hover:bg-lime-500 transition"
+            className="inline-flex items-center px-6 py-3 bg-r1 text-white font-medium rounded-sm  transition"
           >
             Explore More &rarr;
           </Link>

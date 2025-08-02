@@ -9,7 +9,7 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-gray-900 text-white pt-16 pb-8 px-4 sm:px-6 lg:px-8">
+        <footer className="bg-gray-200 text-black pt-16 pb-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
                     {/* Company Info */}
@@ -34,7 +34,7 @@ export default function Footer() {
                                 />
                             </motion.div>
                         </Link>
-                        <p className="text-gray-400 mb-6 max-w-xs">
+                        <p className="text-black mb-6 max-w-xs">
                             Your trusted partner in global chemical trade, delivering quality and reliability since {currentYear}.
                         </p>
                         <div className="flex space-x-4">
@@ -42,7 +42,7 @@ export default function Footer() {
                                 <motion.a
                                     key={index}
                                     href="#"
-                                    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-lime-500 transition-colors"
+                                    className="w-10 h-10 rounded-full bg-gray-300 flex items-center justify-center hover:bg-r1 transition-colors"
                                     whileHover={{ y: -3 }}
                                     aria-label={`Social media link ${index + 1}`}
                                 >
@@ -73,7 +73,7 @@ export default function Footer() {
                                     whileHover={{ x: 5 }}
                                     transition={{ type: "spring", stiffness: 300 }}
                                 >
-                                    <Link href={item.href} className="text-gray-400 hover:text-lime-400 transition-colors">
+                                    <Link href={item.href} className="text-black hover:text-r1 transition-colors">
                                         {item.name}
                                     </Link>
                                 </motion.li>
@@ -107,7 +107,7 @@ export default function Footer() {
                                     whileHover={{ x: 5 }}
                                     transition={{ type: "spring", stiffness: 300 }}
                                 >
-                                    <p className="text-gray-400 hover:text-lime-400 transition-colors">
+                                    <p className="text-black hover:text-r1 transition-colors">
                                         {item}
                                     </p>
                                 </motion.li>
@@ -125,30 +125,30 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-gray-700">Contact Us</h3>
                         <ul className="space-y-4">
                             <li className="flex items-start">
-                                <div className="mt-1 mr-3 text-lime-400">
+                                <div className="mt-1 mr-3 text-r1">
                                     <MapPin className="w-5 h-5" />
                                 </div>
                                 <div>
                                     <p className="font-medium">Corporate Headquarters</p>
-                                    <p className="text-gray-400">123 Vasudexim, Rajkot 360004, India</p>
+                                    <p className="text-black">123 Vasudexim, Rajkot 360004, India</p>
                                 </div>
                             </li>
                             <li className="flex items-start">
-                                <div className="mt-1 mr-3 text-lime-400">
+                                <div className="mt-1 mr-3 text-r1">
                                     <Phone className="w-5 h-5" />
                                 </div>
                                 <div>
                                     <p className="font-medium">Phone</p>
-                                    <p className="text-gray-400">+91 98987 42743</p>
+                                    <p className="text-black">+91 98987 42743</p>
                                 </div>
                             </li>
                             <li className="flex items-start">
-                                <div className="mt-1 mr-3 text-lime-400">
+                                <div className="mt-1 mr-3 text-r1">
                                     <Mail className="w-5 h-5" />
                                 </div>
                                 <div>
                                     <p className="font-medium">Email</p>
-                                    <p className="text-gray-400">vasudexim@gmail.com</p>
+                                    <p className="text-black">vasudexim@gmail.com</p>
                                 </div>
                             </li>
                         </ul>
@@ -159,7 +159,7 @@ export default function Footer() {
 
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
-                    <p className="text-gray-500 text-sm mb-4 md:mb-0">
+                    <p className="text-black text-sm mb-4 md:mb-0">
                         &copy; {currentYear} Vasudexim . All rights reserved.
                     </p>
 

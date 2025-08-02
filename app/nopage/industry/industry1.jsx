@@ -88,7 +88,7 @@ export default function HeroSection() {
                     >
                         <Link
                             href="/contact"
-                            className="bg-lime-400 text-black font-medium px-6 py-3 rounded shadow-md hover:bg-lime-300 transition"
+                            className="bg-r1 text-white font-medium px-6 py-3 rounded shadow-md  transition"
                         >
                             <motion.span
                                 initial={{ opacity: 0 }}

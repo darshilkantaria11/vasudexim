@@ -31,7 +31,7 @@ export default function HeroSection() {
                 <div className="md:hidden absolute inset-0">
                     <motion.div 
                         className="w-full h-full bg-cover bg-center"
-                        style={{ backgroundImage: "url('/Heroimage1.webp')" }}
+                        style={{ backgroundImage: "url('/hero.jpg')" }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8 }}
@@ -42,7 +42,7 @@ export default function HeroSection() {
                 <div className="hidden md:block absolute inset-0">
                     <motion.div 
                         className="w-full h-full bg-cover bg-center"
-                        style={{ backgroundImage: "url('/Heroimage.webp')" }}
+                        style={{ backgroundImage: "url('/hero.jpg')" }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8 }}
@@ -50,7 +50,7 @@ export default function HeroSection() {
                 </div>
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 bg-black/40" />
             </div>
 
             {/* Content */}
@@ -89,7 +89,7 @@ export default function HeroSection() {
                     >
                         <Link
                             href="/contact"
-                            className="bg-lime-400 text-black font-medium px-6 py-3 rounded shadow-md hover:bg-lime-300 transition"
+                            className="bg-r1 text-white font-medium px-6 py-3 rounded shadow-md  transition"
                         >
                             <motion.span
                                 initial={{ opacity: 0 }}

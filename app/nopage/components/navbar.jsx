@@ -14,7 +14,7 @@ const Navbar = () => {
     const navItems = [
         { name: 'Industries', href: '/industries', title: 'Industries We Serve' },
         { name: 'Products', href: '/products', title: 'Our Chemical Products' },
-        { name: 'Clients & Affiliations', href: '/clients', title: 'Our Trusted Clients & Global Network' },
+        { name: 'Export', href: '/export', title: 'Our Trusted Clients & Global Network' },
         { name: 'Contact', href: '/contact', title: 'Get in Touch with Vasudexim' },
     ];
 
@@ -40,24 +40,25 @@ const Navbar = () => {
         <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled ? "backdrop-blur-md bg-white/30 shadow-md" : "bg-transparent"}`}>
 
             <div className="container mx-auto">
-                <div className="flex justify-between items-center h-16 lg:h-20 px-2 lg:px-0">
+                <div className="flex justify-between items-center h-16 lg:h-20 ">
                     {/* Logo */}
-                    <Link href="/" title="Vasudexim Chemical Trading - Home">
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            className="relative w-[80px] lg:w-[100px] h-[50px] lg:h-[60px] cursor-pointer"
-                        >
-                            <Image
-                                src={Logo}
-                                alt="Vasudexim Logo"
-                                fill
-                                className="object-contain"
-                                priority
-                                title="Vasudexim - Global Chemical Traders"
-                            />
-                        </motion.div>
-                    </Link>
-
+                    <div className="m-0 p-0 text-lg font-semibold">
+                        <Link href="/" title="Vasudexim Chemical Trading - Home">
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+                                className="relative w-[80px] lg:w-[100px] h-[50px] lg:h-[60px] cursor-pointer"
+                            >
+                                <Image
+                                    src={Logo}
+                                    alt="Vasudexim Logo"
+                                    fill
+                                    className="object-contain"
+                                    priority
+                                    title="Vasudexim - Global Chemical Traders"
+                                />
+                            </motion.div>
+                        </Link>
+                    </div>
                     {/* Desktop Navigation */}
                     <nav aria-label="Primary Navigation" className="hidden lg:flex items-center">
                         <motion.ul
@@ -90,7 +91,7 @@ const Navbar = () => {
                             <Link
                                 href="/contact"
                                 title="Request a Chemical Quote from Vasudexim"
-                                className="shine-button bg-lime-400 text-black font-bold  border border-lime-400 px-4 font-medium py-3 hover:scale-105 transition-all text-md shadow-lg relative z-10"
+                                className="shine-button bg-r1 text-white font-bold  border border-r1 px-4  py-3 hover:scale-105 transition-all text-md shadow-lg relative z-10"
                             >
                                 Request a Quote →
                             </Link>
@@ -102,19 +103,19 @@ const Navbar = () => {
                         <motion.div
                             initial={{ x: -20 }}
                             animate={{ x: 0 }}
-                            className="ml-4 flex items-center lg:hidden"
+                            className="ml-8 flex items-center lg:hidden"
                         >
                             <Link
                                 href="/contact"
                                 title="Request a Quote"
-                                className="shine-button bg-lime-400 text-black   border border-lime-400 px-3 py-2 font-medium text-sm shadow-md transition-all"
+                                className="shine-button bg-r1 text-white   border border-r1 px-3 py-2 font-medium text-sm shadow-md transition-all relative z-10"
                             >
                                 Request a Quote →
                             </Link>
                         </motion.div>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-lime-400 focus:outline-none p-2"
+                            className="text-r1 focus:outline-none p-2"
                             aria-label={isOpen ? "Close Menu" : "Open Menu"}
                         >
                             {isOpen ? (
@@ -132,25 +133,25 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="lg:hidden absolute top-16 left-0 right-0 bg-white shadow-lg"
+                        className="lg:hidden fixed top-16 left-0 right-0 w-full bg-white z-40 shadow-md"
                         aria-label="Mobile Navigation"
                     >
-                        <div className="pt-2 pb-4 space-y-4 px-4">
+                        <div className="pt-2 pb-4 space-y-2 px-4">
                             {navItems.map((item) => (
                                 <Link
                                     key={item.name}
                                     href={item.href}
                                     title={item.title}
                                     onClick={() => setIsOpen(false)}
-                                    className="border-b block text-black hover:text-blue-600 px-4 py-3 font-medium hover:bg-gray-50 transition-colors"
+                                    className="block text-b1 px-4 py-3 border-b hover:bg-gray-100 text-base font-medium"
                                 >
-                                    {item.name} →
+                                    {item.name}
                                 </Link>
                             ))}
                             <Link
-                                href="/contact"
-                                title="Request a Quote from Vasudexim"
-                                className="shine-button bg-lime-400 text-white hover:bg-white hover:text-lime-400 border border-lime-400 block text-center px-6 py-3 transition-colors font-semibold shadow-md"
+                                href="/get-quote"
+                                title="Request a Quote from Sovanoca Construction Company"
+                                className="shine-button mt-2 bg-b1 text-white hover:bg-white hover:text-b1 border border-b1 block text-center px-6 py-3 transition-all font-semibold shadow-md"
                             >
                                 Request a Quote →
                             </Link>
