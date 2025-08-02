@@ -149,9 +149,9 @@ const Navbar = () => {
                                 </Link>
                             ))}
                             <Link
-                                href="/get-quote"
+                                href="/contact"
                                 title="Request a Quote from Sovanoca Construction Company"
-                                className="shine-button mt-2 bg-b1 text-white hover:bg-white hover:text-b1 border border-b1 block text-center px-6 py-3 transition-all font-semibold shadow-md"
+                                className="shine-button mt-2 bg-r1 text-white  border border-b1 block text-center px-6 py-3 transition-all font-semibold shadow-md"
                             >
                                 Request a Quote →
                             </Link>
