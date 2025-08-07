@@ -7,7 +7,7 @@ export default function HeroSection() {
         {/* LEFT TEXT */}
         <div>
           <span className="inline-block px-4 py-1 mb-4 text-sm font-medium border border-gray-300 rounded-full">
-            Welcome to VASUDEXIM
+            Welcome to VASUD EXIM
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             Manufacturing And Exporting of High-Quality Chemicals.
@@ -16,7 +16,7 @@ export default function HeroSection() {
             Our commitment to excellence, customer-centric approach, and extensive
             industry expertise make us a trusted partner for businesses worldwide.
             Whether you're looking for standard products or bespoke chemical solutions,
-            Vasu D Exim is dedicated to providing exceptional service and support.
+            Vasud Exim is dedicated to providing exceptional service and support.
           </p>
           <Link
             href="/products"

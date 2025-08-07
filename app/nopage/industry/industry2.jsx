@@ -11,7 +11,7 @@ const ServicesSection = () => {
             id: 1,
             title: "Calcium Chloride for Oil & Gas",
             description: "Used in drilling fluids and completion fluids, Calcium Chloride improves well stability and prevents formation damage in oil and gas exploration.",
-            image: "/oil-gas.jpg"
+            image: "/oil.jpeg"
         },
         {
             id: 2,
@@ -23,7 +23,7 @@ const ServicesSection = () => {
             id: 3,
             title: "Calcium Chloride for Road Deicing",
             description: "An effective deicing agent, Calcium Chloride ensures safer roads by quickly melting ice and snow even in sub-zero temperatures.",
-            image: "/road-deicing.jpg"
+            image: "/road.jpeg"
         },
         {
             id: 4,

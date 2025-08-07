@@ -31,7 +31,7 @@ export default function HeroSection() {
                 <div className="md:hidden absolute inset-0">
                     <motion.div
                         className="w-full h-full bg-cover bg-center"
-                        style={{ backgroundImage: "url('/Industry.jpg')" }}
+                        style={{ backgroundImage: "url('/industry.jpg')" }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8 }}
@@ -42,7 +42,7 @@ export default function HeroSection() {
                 <div className="hidden md:block absolute inset-0">
                     <motion.div
                         className="w-full h-full bg-cover bg-center"
-                        style={{ backgroundImage: "url('/Industry.jpg')" }}
+                        style={{ backgroundImage: "url('/industry.jpg')" }}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.8 }}

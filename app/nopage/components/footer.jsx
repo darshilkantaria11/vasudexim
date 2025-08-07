@@ -81,7 +81,6 @@ export default function Footer() {
                         </ul>
                     </motion.div>
 
-
                     {/* Products */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -92,24 +91,20 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-gray-700">Our Products</h3>
                         <ul className="space-y-3">
                             {[
-                                "Calcium chloride lumps",
-
-                                "Calcium chloride powder 74 %",
-
-                                "Calcium chloride powder 94 %",
-
-                                "Calcium chloride granules",
-
-                                "Magnesium chloride flakes",
+                                { name: "Calcium chloride lumps", slug: "/products/calcium-chloride-lumps" },
+                                { name: "Calcium chloride powder 74 %", slug: "/products/calcium-chloride-powder-74" },
+                                { name: "Calcium chloride powder 94 %", slug: "/products/calcium-chloride-powder-94" },
+                                { name: "Calcium chloride granules", slug: "/products/calcium-chloride-granules" },
+                                { name: "Magnesium chloride flakes", slug: "/products/magnesium-chloride-flakes" },
                             ].map((item, index) => (
                                 <motion.li
                                     key={index}
                                     whileHover={{ x: 5 }}
                                     transition={{ type: "spring", stiffness: 300 }}
                                 >
-                                    <p className="text-black hover:text-r1 transition-colors">
-                                        {item}
-                                    </p>
+                                    <Link href={item.slug} className="text-black hover:text-r1 transition-colors">
+                                        {item.name}
+                                    </Link>
                                 </motion.li>
                             ))}
                         </ul>
@@ -139,7 +134,9 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <p className="font-medium">Phone</p>
-                                    <p className="text-black">+91 98987 42743</p>
+                                    <a href="tel:+919898742743" className="text-black hover:text-r1 transition-colors">
+                                        +91 98987 42743
+                                    </a>
                                 </div>
                             </li>
                             <li className="flex items-start">
@@ -148,21 +145,20 @@ export default function Footer() {
                                 </div>
                                 <div>
                                     <p className="font-medium">Email</p>
-                                    <p className="text-black">vasudexim@gmail.com</p>
+                                    <a href="mailto:vasudexim@gmail.com" className="text-black hover:text-r1 transition-colors">
+                                        vasudexim@gmail.com
+                                    </a>
                                 </div>
                             </li>
                         </ul>
                     </motion.div>
                 </div>
 
-
-
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-black text-sm mb-4 md:mb-0">
-                        &copy; {currentYear} Vasudexim . All rights reserved.
+                        &copy; {currentYear} Vasudexim. All rights reserved.
                     </p>
-
                 </div>
             </div>
         </footer>
