@@ -42,8 +42,8 @@ const Navbar = () => {
             <div className="container mx-auto">
                 <div className="flex justify-between items-center h-16 lg:h-20 ">
                     {/* Logo */}
-                    <div className="m-0 p-0 text-lg font-semibold">
-                        <Link href="/" title="Vasudexim Chemical Trading - Home">
+                    <div className="flex flex-col items-center text-center">
+                        <Link href="/" title="Vasudexim Chemical Trading - Home" className="flex flex-col items-center">
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 className="relative w-[80px] lg:w-[100px] h-[50px] lg:h-[60px] cursor-pointer"
@@ -57,8 +57,13 @@ const Navbar = () => {
                                     title="Vasudexim - Global Chemical Traders"
                                 />
                             </motion.div>
+                            <div className="text-r1 text-xs lg:text-lg font-semibold tracking-wide leading-snug">
+                                VASUD EXIM LLP
+                            </div>
                         </Link>
                     </div>
+
+
                     {/* Desktop Navigation */}
                     <nav aria-label="Primary Navigation" className="hidden lg:flex items-center">
                         <motion.ul

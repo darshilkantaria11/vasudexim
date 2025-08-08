@@ -18,8 +18,9 @@ export default function Footer() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
+                        className="flex flex-col items-center text-center"
                     >
-                        <Link href="/" title="Vasudexim Chemical Trading - Home">
+                        <Link href="/" title="Vasudexim Chemical Trading - Home" className="flex flex-col items-center">
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
                                 className="relative w-[80px] lg:w-[100px] h-[50px] lg:h-[60px] cursor-pointer"
@@ -33,10 +34,15 @@ export default function Footer() {
                                     title="Vasudexim - Global Chemical Traders"
                                 />
                             </motion.div>
+                            <div className="mt-2 text-base lg:text-lg font-semibold tracking-wide leading-snug">
+                                VASUD EXIM LLP
+                            </div>
                         </Link>
-                        <p className="text-black mb-6 max-w-xs">
+
+                        <p className="text-black mt-4 mb-6 max-w-xs">
                             Your trusted partner in global chemical trade, delivering quality and reliability since {currentYear}.
                         </p>
+
                         <div className="flex space-x-4">
                             {[Linkedin, Twitter, Instagram, Facebook].map((Icon, index) => (
                                 <motion.a
@@ -51,6 +57,7 @@ export default function Footer() {
                             ))}
                         </div>
                     </motion.div>
+
 
                     {/* Quick Links */}
                     <motion.div
