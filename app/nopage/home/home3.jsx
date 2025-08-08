@@ -7,16 +7,16 @@ export default function HeroSection() {
         {/* LEFT TEXT */}
         <div>
           <span className="inline-block px-4 py-1 mb-4 text-sm font-medium border border-gray-300 rounded-full">
-            Welcome to VASUD EXIM
+            Welcome to VASUD EXIM LLP
           </span>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Manufacturing And Exporting of High-Quality Chemicals.
+            Exporting High-Quality Chemicals.
           </h1>
           <p className="text-lg text-gray-600 mb-8">
             Our commitment to excellence, customer-centric approach, and extensive
             industry expertise make us a trusted partner for businesses worldwide.
             Whether you're looking for standard products or bespoke chemical solutions,
-            Vasud Exim is dedicated to providing exceptional service and support.
+            VASUD EXIM LLP is dedicated to providing exceptional service and support.
           </p>
           <Link
             href="/products"

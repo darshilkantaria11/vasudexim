@@ -41,7 +41,7 @@ export default function BasicChemicals() {
           </h2>
 
           <p className="text-gray-700 mb-6 text-sm sm:text-base leading-relaxed break-words">
-            At Vasud Exim, we provide a comprehensive range of basic chemicals that are essential for various industrial applications. Our portfolio includes high-quality, versatile chemicals that form the backbone of numerous manufacturing processes.
+            At VASUD EXIM LLP, we provide a comprehensive range of basic chemicals that are essential for various industrial applications. Our portfolio includes high-quality, versatile chemicals that form the backbone of numerous manufacturing processes.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-800 break-words">

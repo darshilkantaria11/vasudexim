@@ -21,7 +21,7 @@ export default function GlobalNetworkSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto"
         >
-          At Vasudexim, we are dedicated to delivering premium solutions to clients around the globe.
+          At VASUD EXIM LLP, we are dedicated to delivering premium solutions to clients around the globe.
           Our robust export operations are designed to provide seamless access to high-quality products,
           ensuring businesses worldwide benefit from our expertise and precision.
         </motion.p>

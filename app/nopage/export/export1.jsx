@@ -79,7 +79,7 @@ export default function HeroSection() {
                         className="mt-6 text-lg text-white max-w-4xl"
                         variants={itemVariants}
                     >
-                        Vasudexim proudly exports high-quality chemicals to 20+ countries including the United Arab Emirates, Oman, Kuwait, Vietnam, Thailand, Malaysia, Nigeria, Namibia, Iraq, Argentina, Congo, Canada, Indonesia, Australia, Singapore, the United Kingdom, Brazil, Sweden, Spain, and Norway — ensuring global compliance, consistent quality, and trusted international partnerships.
+                        VASUD EXIM LLP proudly exports high-quality chemicals to 20+ countries including the United Arab Emirates, Oman, Kuwait, Vietnam, Thailand, Malaysia, Nigeria, Namibia, Iraq, Argentina, Congo, Canada, Indonesia, Australia, Singapore, the United Kingdom, Brazil, Sweden, Spain, and Norway — ensuring global compliance, consistent quality, and trusted international partnerships.
 
                     </motion.p>
 

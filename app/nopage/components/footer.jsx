@@ -65,7 +65,7 @@ export default function Footer() {
                                 { name: 'Home', href: '/' },
                                 { name: 'Industries', href: '/industries' },
                                 { name: 'Products', href: '/products' },
-                                { name: 'Client & Affiliation', href: '/clientsaffiliation' },
+                                { name: 'Export', href: '/export' },
                                 { name: 'Contact', href: '/contact' }
                             ].map((item, index) => (
                                 <motion.li
@@ -157,7 +157,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-black text-sm mb-4 md:mb-0">
-                        &copy; {currentYear} Vasudexim. All rights reserved.
+                        &copy; {currentYear} VASUD EXIM LLP. All rights reserved.
                     </p>
                 </div>
             </div>
