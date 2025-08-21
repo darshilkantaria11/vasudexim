@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://vasudexim.com
+
+# Sitemaps
+Sitemap: https://vasudexim.com/sitemap.xml
